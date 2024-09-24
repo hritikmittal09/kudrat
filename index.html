@@ -20,45 +20,65 @@
       </div>
     </div>
   </section>
-
   <section class="flex flex-col justify-center items-center">
     <h3 class="title-font sm:text-3xl text-3xl mb-4 font-medium text-gray-900">Our Products</h3>
     <div class="flex-row flex flex-wrap gap-5 md:justify-center">
-
-      <!-- First Product Card -->
-      <a class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
-        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:ml-10 md:rounded-none md:rounded-s-lg"
-          src="./images/p1.png" alt="Chamak Product Image">
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-2xl font-bold">Chamak</h5>
-          <p class="mb-3 font-normal px-20 text-gray-700 dark:text-gray-400">
-          <ul class="flex flex-col gap-4">
-            <li><b>Benefits</b> - Instant glow • Even skintone • Reduced pore size • Smooth skin • Firm skin</li>
-            <li class="my-2"><b>Ingredients</b> - Loaded with the goodness of Almonds & Roses</li>
-            <li><b>How To Use</b> - Can be used as a powder cleanser or mask. Take the required quantity using a dry spoon, add water, make a paste, and apply. Leave for 10 min, then rinse off.</li>
-          </ul>
-          </p>
+  
+      <!-- Repeat this structure for more product cards -->
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4">
+        <img class="w-full" src="./images/p2.png" alt="Product 1">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Chamak</div>
+          <p class="text-gray-700 text-base">Face Mask</p>
+          <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="toggleExpand(1)">
+            Show More
+          </button>
         </div>
-      </a>
-
-      <!-- Second Product Card (Make sure to modify details) -->
-      <a class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
-        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:ml-10 md:rounded-none md:rounded-s-lg"
-          src="./images/p1.png" alt="Another Product Image">
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-2xl font-bold">Glow Up</h5>
-          <p class="mb-3 font-normal px-20 text-gray-700 dark:text-gray-400">
-          <ul class="flex flex-col gap-4">
-            <li><b>Benefits</b> - Brightens skin • Smoothens texture • Reduces blemishes</li>
-            <li class="my-2"><b>Ingredients</b> - Enriched with Turmeric and Aloe Vera</li>
-            <li><b>How To Use</b> - Mix with water to form a paste, apply to the face, leave for 15 minutes, and rinse.</li>
-          </ul>
-          </p>
+        <div id="collapseContent1" class="px-6 py-4 hidden">
+          <p class="text-gray-700 text-base"><strong>Benefits:</strong> Instant glow, smooth skin.</p>
+          <p class="mt-2 text-gray-700 text-base"><strong>Ingredients:</strong> Almonds & Roses.</p>
+          <p class="mt-2 text-gray-700 text-base"><strong>How To Use:</strong> Mix with water, apply for 10 minutes.</p>
         </div>
-      </a>
-
+      </div>
+  
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4">
+        <img class="w-full" src="./images/p2.png" alt="Product 2">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Product 2</div>
+          <p class="text-gray-700 text-base">Face Scrub</p>
+          <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="toggleExpand(2)">
+            Show More
+          </button>
+        </div>
+        <div id="collapseContent2" class="px-6 py-4 hidden">
+          <p class="text-gray-700 text-base"><strong>Benefits:</strong> Deep exfoliation, smooth skin.</p>
+          <p class="mt-2 text-gray-700 text-base"><strong>Ingredients:</strong> Walnut & Aloe Vera.</p>
+          <p class="mt-2 text-gray-700 text-base"><strong>How To Use:</strong> Apply and scrub in circular motions.</p>
+        </div>
+      </div>
+  
+      <!-- Add 5 more cards similarly by changing content -->
     </div>
   </section>
+  
+  
+
+  <script >
+    
+function toggleExpand(cardNumber) {
+    const content = document.getElementById(`collapseContent${cardNumber}`);
+    const button = content.previousElementSibling.querySelector('button');
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      button.innerText = 'Show Less';
+    } else {
+      content.classList.add('hidden');
+      button.innerText = 'Show More';
+    }
+  }
+  
+
+  </script>
 </body>
 
 </html>
