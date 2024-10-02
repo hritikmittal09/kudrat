@@ -887,10 +887,6 @@ video {
   width: 100%;
 }
 
-.max-w-sm {
-  max-width: 24rem;
-}
-
 .max-w-screen-sm {
   max-width: 640px;
 }
@@ -2279,6 +2275,10 @@ video {
   text-decoration-style: wavy;
 }
 
+.underline-offset-1 {
+  text-underline-offset: 1px;
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2729,10 +2729,6 @@ video {
 
   .md\:justify-start {
     justify-content: flex-start;
-  }
-
-  .md\:justify-center {
-    justify-content: center;
   }
 
   .md\:pl-20 {
